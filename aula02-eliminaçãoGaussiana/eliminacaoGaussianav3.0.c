@@ -108,10 +108,49 @@ double *SubstituicaoReversa( double **M, int m, int n) {
     return coef;
 }
 
+double *VerificaResolucao(double **M, double *VetorRaizes, int m, int n){
+  double **MatrizOriginal, *VetorNulo, *VetorTermosIndependentes;
+  int i,j;
+  
+  MatrizOriginal = malloc ( m*sizeof(double *) );
+  for ( i = 0; i < m; i++ ) MatrizOriginal[i] = malloc( m*sizeof(double));
+  
+  VetorNulo = malloc (m*sizeof(double *) );
+  VetorTermosIndependentes = malloc (m*sizeof(double *) );
+  
+  for ( i = 0; i < m; i++ ) {
+    for ( j = 0; j < m; j++ ) {
+        MatrizOriginal[i][j] = M[i][j];
+    }  
+  }
+  
+  j = n-1;
+  for ( i = 0; i < m; i++ ) {
+    VetorTermosIndependentes[i] = M[i][j];
+  }
+  
+  for(i=0;i<m;i++){
+      VetorNulo[i] = 0;
+  }
+
+  for(i=0;i<m;i++){
+      for(j=0;j<m;j++){
+        VetorNulo[i] = VetorNulo[i] + MatrizOriginal[i][j]*VetorRaizes[j];
+      }
+  }  
+  
+  for(i=0;i<m;i++){
+      VetorNulo[i] = VetorNulo[i] - VetorTermosIndependentes[i];
+  }
+  
+  free(MatrizOriginal);
+  return VetorNulo;
+}
+
 int main(int argc, char **argv)
 {
   int m,n,i,j,p;
-  double **M, lbd, *raizes;
+  double **M, lbd, *raizes, *vetorNulo;
   
   m = atoi(argv[1]);
   n = atoi(argv[2]);
@@ -121,6 +160,9 @@ int main(int argc, char **argv)
   raizes = SubstituicaoReversa(M,m,n);
   printf("As raizes do sistema são : ");
   for (i=0; i<m; i++) printf("x%1d = %6.2g ",i,raizes[i]);
+  vetorNulo = VerificaResolucao(M,raizes,m,n);
+  printf("Verificação da solução: ");
+  for (i=0; i<m; i++) printf("x%1d = %6.2g ",i,vetorNulo[i]);
   
   return 0;
 }
