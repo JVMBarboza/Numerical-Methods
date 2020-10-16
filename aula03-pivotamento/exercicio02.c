@@ -1,22 +1,15 @@
+
 ////////////////////////////////////////////////
-// Testes realizado com uso da mesma matriz   //
-// estuda na videoaula:                       //
-//           1  1  0  3  4                    //
-//           2  1 -1  1  1                    //
-//           3 -1 -1  2 -3                    //
-//          -1  2  3 -1  4                    //
-// m = 4 e n=5;                               //
+// Testes realizado com uso da  matriz        //
+//      3992004.0 1998.0 1.0 170.0            //
+//      4032064.0 2008.0 1.0 192.0            //
+//      4072324.0 2018.0 1.0 209.5            //
+// m=3 e n=4;                                 //
 ////////////////////////////////////////////////
-////////////////////////////////////////////////
-// Testes realizado com uso da mesma matriz   //
-// estuda na videoaula:                       //
-//           3992004 1998 1 170               //
-//           4032064 2008 1 192               //
-//           4072324 2018 1 209.5             //
-// m = 4 e n=5;                               //
-////////////////////////////////////////////////
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 double **LeMatrix(int m, int n) {
   double **M;
@@ -157,19 +150,19 @@ double *VerificaResolucao(double **M, double *VetorRaizes, int m, int n){
 int main(int argc, char **argv)
 {
   int m,n,i,j,p;
+  char coef[3] = {"abc"};
   double **M, lbd, *raizes, *vetorNulo;
   
   m = atoi(argv[1]);
   n = atoi(argv[2]);
   M = LeMatrix(m,n);
+  printf("A matriz que representa o sistema é:\n");
   ImprimeMatriz(M,m,n);
   M = Triangulariza(M,m,n);
   raizes = SubstituicaoReversa(M,m,n);
-  printf("As raizes do sistema são :\n ");
-  for (i=0; i<m; i++) printf("x%1d = %6.2g\n",i,raizes[i]);
-  vetorNulo = VerificaResolucao(M,raizes,m,n);
-  printf("Verificação da solução:\n ");
-  for (i=0; i<m; i++) printf("x%1d = %6.2g\n",i,vetorNulo[i]);
+  printf("As raizes do sistema são :\n");
+  for (i=0; i<m; i++) printf("%1c = %6.2g\n",coef[i],raizes[i]);
+  printf("\nA população estimada para 2021 então será:%g M.",2021*2021*raizes[0]+2021*raizes[1]+raizes[2]);
   
   return 0;
 }

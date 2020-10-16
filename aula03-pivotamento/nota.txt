@@ -1,0 +1,3 @@
+ Esse foi o algoritmo mais complicado e como veremos não vale tanto o esforço
+devido ao gasto computacional quando comparado à elimicação LU por ex. Leves 
+bugs ocorrem dependendo da matriz.
