@@ -1,0 +1,5 @@
+A fatoração LU se mostrou, até a aula 4 como o melhor
+algoritmo para a resolucação de sistemas e obtenção da
+inversa. Não só por ser menos custoso computacionalmen
+te mas também por ser relativamente mais fácil de se ver
+a lógica durante a escrita. 
