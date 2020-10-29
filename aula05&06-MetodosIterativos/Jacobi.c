@@ -31,11 +31,31 @@ void ImprimeMatriz(double **M, int m, int n) {
   puts("");
 }
 
+double **TrocaLinhas(double **M,int m, int n, int i, int j) {
+  double tmp;
+  int k;
+  
+  for (k=0; k<n; k++) {
+    tmp = M[i][k];
+    M[i][k] = M[j][k];
+    M[j][k] = tmp; 
+  }
+  return M;
+}
+
 double *Jacobi(double **A, int m, int n, double *x0){
     int i,j;
     double *x, sum=0;
 
     x = (double *)malloc(m*sizeof(double));
+
+    for(i=0; i<m; i++){ 
+      for(j=i+1; j<m; j++){
+        if(fabs(A[i][i]) < fabs(A[j][i])){
+          A = TrocaLinhas(A,m,n,i,j);
+        }
+      }
+    }
 
     for(i=0;i<m;i++){
         for(j=0;j<m;j++){
@@ -59,15 +79,6 @@ double normdiff(double *x0, double *x1, int m){
     }
 
     return norm;
-
-    //TESTAR DEPOIS
-    //double norm1 = 0, norm2 = 0;
-    //int i;
-    //for(i=0;i<m;i++){
-    //    norm1 = norm1 + x0[i]*x0[i];
-    //    norm2 = norm2 + x1[i]*x1[i];
-    //}
-    //return (sqrt(norm2) - sqrt(norm1));
 }
 
 int main(int argc, char **argv)
@@ -90,6 +101,10 @@ int main(int argc, char **argv)
         memcpy(x0,x1,m*sizeof(double)); //copia o novo conteudo de x1 para x0;
         printf("%.2g\n",dx);
     }while(dx > tolerance);
+    
 
+    printf("\nSolução:\n");
+    for(i=0;i<m;i++) printf("%lf\t",x0[i]);
+    
     return 0;
 }

@@ -1,0 +1,10 @@
+ Nesta aula foram apresentados os metodos 
+iterativos para a resolucao de sistemas.
+A diferença entre os dois é apenas entre
+o custo computacional pois ambas, dependendo 
+da escala do problema, se demonstram de grande 
+eficacia na resolucao de problemas. Diferente
+dos metodos estudados ate em entao este conta 
+com a conhecida tolerancia definida pelo progra
+mador de modo analogo em metodos I e menos defi
+nicoes e calculos matriciais.
