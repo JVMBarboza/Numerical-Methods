@@ -85,7 +85,6 @@ void LU( double **M, double **L, double **U, int m, int n) {
 
 }
 
-
 double *resolveLyB(double **L, double **M, int m){
     int i,countSolved=0;
     double *B,*y;
