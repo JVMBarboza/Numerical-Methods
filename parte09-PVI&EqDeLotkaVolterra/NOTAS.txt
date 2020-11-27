@@ -1,0 +1,7 @@
+ Essa foi uma das aulas mais interessantes até agora, runge-kuta
+aplicado na resolucao de sistemas de EDO, geralmente na forma:
+        f0 = dY1/dt = EDO
+        f1 = dY2/dt = EDO 
+ O caso de estudo foram as equacoes de Lotka-Volterra(problema caça-caçador)
+e como as constantes que multiplicam os termos da edo e suas interpretacoes 
+fisicas facilitam o entendimento e a modelagem do problema.     

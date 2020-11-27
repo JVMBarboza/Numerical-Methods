@@ -30,12 +30,12 @@ void rk4(double x, double y[N], double h, double Eo){
     }
 
     for(i=0;i<N;i++){
-        k3[i] = h*f[i](x+h/2,ypp,Eo);
+        k3[i] = f[i](x+h/2,ypp,Eo);
         yp[i] = y[i]+h*k3[i];
     }
 
     for(i=0;i<N;i++){
-        k4[i] = h*f[i](x+h,yp,Eo);
+        k4[i] = f[i](x+h,yp,Eo);
         y[i] += (h/6)*(k1[i]+2*k2[i]+2*k3[i]+k4[i]); 
     }
 }
@@ -49,7 +49,7 @@ int main(int argc, char **argv){
     Eo = atof(argv[3]);
 
     a=0;
-    b=100;
+    b=10;
     h=0.1;
     x=a;
 
