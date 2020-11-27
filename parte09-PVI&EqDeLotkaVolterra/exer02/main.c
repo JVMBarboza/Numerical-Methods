@@ -11,7 +11,7 @@ double f0(double x, double y[N], double Eo){
 }
 
 double f1(double x, double y[N], double Eo){
-    return  (-11 + (9./4.)*y[0] - 6*y[1] + 6*Eo); // dE/dt = P-V
+    return  (-11 + 6*Eo + (13./4.)*y[0] - 6*y[1]); // dE/dt = P-V
 }
 
 void rk4(double x, double y[N], double h, double Eo){
@@ -49,7 +49,7 @@ int main(int argc, char **argv){
     Eo = atof(argv[3]);
 
     a=0;
-    b=2;
+    b=100;
     h=0.1;
     x=a;
 
