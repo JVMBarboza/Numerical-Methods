@@ -67,7 +67,7 @@ int main(int argc, char **argv){
     h = (b-a)/(N+1);
 
     x = DiferencasFinitas(a, N, h, alpha, beta);
-    for(i=0;i<=N+1;i++) printf("%lf %lf\n",a+i+h, x[i]);
+    for(i=0;i<=N+1;i++) printf("%lf %lf\n",a+i*h, x[i]);
 
     return 0;
 }
