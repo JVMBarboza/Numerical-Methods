@@ -3,7 +3,7 @@ import numpy as np
 
 fig_name = "image.png"
 
-data = np.genfromtxt("saida.dat",delimiter=' ')
+data = np.genfromtxt("saida100.dat",delimiter=' ')
 
 x = data[:,0]
 y = data[:,1]
@@ -11,11 +11,11 @@ y = data[:,1]
 main_fig = plt.figure()
 mainPlot = main_fig.add_axes([0.1, 0.1, 0.8, 0.8])
 
-mainPlot.plot(x,y,color='#f46506', lw=1.5, label="")
+mainPlot.plot(x,y,color='#2949ff', lw=1.5, label="")
 #mainPlot.plot(x,z,color='#f41a1a', lw=1.5, label="pop 2")
 
 mainPlot.set_xlabel('x', fontsize=15)
-mainPlot.set_ylabel('Temperature (K)', fontsize=15)
+mainPlot.set_ylabel('Error', fontsize=15)
 
 mainPlot.grid(True,axis='both',alpha=0.24)
 mainPlot.tick_params(axis='both',direction='in',bottom=1, top=0, left=1, right=0)

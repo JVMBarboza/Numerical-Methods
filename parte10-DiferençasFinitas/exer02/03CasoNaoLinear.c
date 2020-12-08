@@ -3,17 +3,20 @@
 #include <math.h>
 
 double f(double x, double y, double y1){
-    return log(x);
+    return -y1*y1 - y + log(y);
 }
 
 double f1(double x, double y, double y1){
-    return 1/x;
+    return -1 + (1/y);
 }
 
 double f11(double x, double y, double y1){
-    return -1/(x*x) - log(x) + log(y);
+    return -2*y1;
 }
 
+double funcExata(double x){
+    return log(x);
+}
 
 double *DiferencasFinitas(double a, double b, int N, double h, double alpha, double beta){
     int i, itera;
@@ -101,8 +104,10 @@ int main(int argc, char **argv){
     h = (b-a)/(N+1);
 
     x = DiferencasFinitas(a,b,N,h,alpha,beta);
-    printf("%lf %lf\n", a, alpha);
-    for(i=0;i<N+1;i++) printf("%lf %lf\n",a+i*h, x[i]);
-    printf("%lf %lf\n", b, beta);
+    //printf("%lf %lf\n", a, alpha);
+    for(i=1;i<N+1;i++){
+         printf("%lf %lf\n",a+i*h, fabs((x[i]-funcExata(a+i*h))/funcExata(a+i*h)));
+    }
+    //printf("%lf %lf\n", b, beta);
     return 0;
 }

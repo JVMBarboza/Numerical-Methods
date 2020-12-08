@@ -3,15 +3,15 @@
 #include <math.h>
 
 double f(double x, double y, double y1){
-    return log(x);
+    return -sin(y);
 }
 
 double f1(double x, double y, double y1){
-    return 1/x;
+    return -cos(y);
 }
 
 double f11(double x, double y, double y1){
-    return -1/(x*x) - log(x) + log(y);
+    return 0;
 }
 
 

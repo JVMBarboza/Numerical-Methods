@@ -1,0 +1,22 @@
+# 01 Problema Linear
+ Para modelar corretamente este problema devemos ter a edo na forma:
+   y'' = p(x)*y' + q(x)*y + r(x)
+ E as condições de contorno y(a)=alpha e y(b)=beta, sendo a e b as extremidades
+
+# 02 Eq. do Calor
+ Sendo a eq. do calor: T'' = -gamma*T +gamma*Tinf
+ -> Apenas uma aplicação do primeiro caso para:
+   p(x) = 0
+   q(x) = -gamma
+   r(x) = gamma*Tinf (Tinf diferente de T)
+
+# 03 Caso Não-Linear
+ ja neste problema devemos ter a edo na forma:
+   y'' = ay' + by + c 
+ onde:f   = y''
+      f1  = df/dy
+      f11 = df/dy'
+ Ex.: Exercicio 02 da lista. y'' = -(y')² - y - ln(y)
+      f   = -(y')² - y - ln(y)
+      f1  = -1 - 1/y
+      f11 = -2y'
