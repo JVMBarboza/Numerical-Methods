@@ -1,4 +1,4 @@
-# Metodos-Numericos
+# Numerical-Methods
 	Repo with contents learned during Numerical Methods I and II disciplines in the periods 2019.2 and 2020.1 UFF-Volta Redonda(ICEx).
 
 
