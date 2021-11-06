@@ -1,5 +1,5 @@
 # Metodos-Numericos
-	Repositório dos curso de Métodos Numéricos I e II feitos nos períodos 2019.2 e 2020.1 na UFF-Volta Redonda(ICEx).
+	Repo with contents learned during Numerical Methods I and II disciplines in the periods 2019.2 and 2020.1 UFF-Volta Redonda(ICEx).
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
