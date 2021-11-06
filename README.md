@@ -112,7 +112,7 @@ Project Link: [https://github.com/JVMBarboza/Agent-Based-Model-Covid19](https://
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-I would like to thank professors Aquino Lauri and Thadeu Penna  for the great work in both disciplines of Numerical methos I and II.
+I would like to thank professors Aquino Lauri and Thadeu Penna  for the great work in both disciplines of Numerical methods I and II.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
