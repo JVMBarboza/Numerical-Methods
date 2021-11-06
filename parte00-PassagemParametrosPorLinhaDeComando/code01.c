@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int main(int argc, int **argv){
+int main(int argc, char **argv){
 	int i;
 
-	printf("Nº de argumentos:%d\n",argc);
+	printf("N of arguments:%d\n",argc);
 
 	for(i=0;i<argc;i++) printf("%s\n",argv[i]);
 

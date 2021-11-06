@@ -7,7 +7,7 @@ double f1(double x, double y){ return x+y; }
 double f2(double x, double y){ return x*y; }
 double f3(double x, double y){ return x/y; }
 
-int main(int argc, int **argv){
+int main(int argc, char **argv){
 	
 	sistfunc eq[3] = {f1,f2,f3};
 

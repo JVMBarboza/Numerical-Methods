@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, int **argv){
+int main(int argc, char **argv){
 
 	double base, altura, area;
 
