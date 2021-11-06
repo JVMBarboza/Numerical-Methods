@@ -71,7 +71,7 @@ Otherwise feel free to manually install each one:
 
 ## Usage
 
-During the course, the notes were being improved, so one can find in NOTAS.txt some documentations e tips for usage in Portuguese.
+During the course, the notes were being improved, so one can find in NOTAS.txt some documentations and tips for usage in Portuguese.
 
 <!-- CONTRIBUTING -->
 ## Contributing
