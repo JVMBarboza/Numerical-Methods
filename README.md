@@ -1,5 +1,5 @@
-# Metodos-Numericos
-	Repositório dos curso de Métodos Numéricos I e II feitos nos períodos 2019.2 e 2020.1 na UFF-Volta Redonda(ICEx).
+# Numerical-Methods
+	Repo with contents learned during Numerical Methods I and II disciplines in the periods 2019.2 and 2020.1 UFF-Volta Redonda(ICEx).
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -71,7 +71,7 @@ Otherwise feel free to manually install each one:
 
 ## Usage
 
-During the course, the notes were being improved, so one can find in NOTAS.txt some documentations e tips for usage in Portuguese.
+During the course, the notes were being improved, so one can find in NOTAS.txt some documentations and tips for usage in Portuguese.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -112,7 +112,7 @@ Project Link: [https://github.com/JVMBarboza/Agent-Based-Model-Covid19](https://
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-I would like to thank professors Aquino Lauri and Thadeu Penna  for the great work in both disciplines of Numerical methos I and II.
+I would like to thank professors Aquino Lauri and Thadeu Penna  for the great work in both disciplines of Numerical methods I and II.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
