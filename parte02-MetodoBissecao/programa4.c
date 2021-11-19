@@ -26,21 +26,21 @@ int main()
 	do{
 		xn = (xa+xb)/2.0;
 		
-		while(fabs(func(xn)) >= eps)
-        	{
-             		if(func(xa)*func(xn)<0)
-                	{
-                       		xn=(xa+xb)/2.0;
-				xa=xa;
-                       		xb=xn;
-                	}
-                	if(func(xb)*func(xn)<0)
-                	{
-                       		xn=(xa+xb)/2.0;
-				xb=xb;
-                        	xa=xn;
-                	}
-        	}
+		while(fabs(func(xn)) >= eps){
+
+			if(func(xa)*func(xn)<0){
+
+					xn=(xa+xb)/2.0;
+					xa=xa;
+					xb=xn;
+			}
+			
+			if(func(xb)*func(xn)<0){
+					xn=(xa+xb)/2.0;
+					xb=xb;
+					xa=xn;
+			}
+        }
 
 		raizes[q] = xn;
 		q++;
@@ -48,14 +48,12 @@ int main()
 		da = xn-xa_original;
 		db = xn-xb_original;
 		
-		if(da < db)
-		{	
+		if(da < db){	
 			xb_original = xn - eps;
 			xb = xb_original;
 			xa = xa_original;
 		}
-		else
-		{
+		else{
 			xa_original = xn + eps;
 			xa = xa_original;
 			xb = xb_original; 
@@ -64,8 +62,7 @@ int main()
 	}while(q<3); //q == 3 --> encontrou as 4 raizes
 
 	printf("As raízes são:\n");
-	for(i=0;i<4;i++)
-	{
+	for(i=0;i<4;i++){
 		printf("\t %i:%lf \n", i+1, raizes[i]);
 	}
 

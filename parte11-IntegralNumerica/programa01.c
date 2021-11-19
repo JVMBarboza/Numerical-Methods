@@ -20,33 +20,33 @@
 
 double func(double x)
 {
-	return ( (97000*x)/((5*x*x)+570000));
+    return ( (97000*x)/((5*x*x)+570000));
 }
 int main()
 {
-   double a, b, x, N, inte, h, i, soma=0;
+    double a, b, x, N, inte, h, i, soma=0;
+    
+    printf("Informe a quantidade de intervalos: ");
+    scanf("%lf", &N);
+    
+    printf("Informe o valor a: ");
+    scanf("%lf", &a);
+    
+    printf("Informe o valor b: ");
+    scanf("%lf", &b);
    
-   printf("Informe a quantidade de intervalos: ");
-   scanf("%lf", &N);
-
-   printf("Informe o valor a: ");
-   scanf("%lf", &a);
-
-   printf("Informe o valor b: ");
-   scanf("%lf", &b);
-   
-   h = (b-a)/N*(1.0); 
-   x=a;
+    h = (b-a)/N*(1.0); 
+    x=a;
     
     for(i=1;i<=N;i++)
     {
-   	 soma = soma+func(x); //Chamar a função(a) até função(b);
-     x = x+h; //Andar com o intervalo em x, ou seja, 1º(a até x) 2º(x até b)
+        soma = soma+func(x); //Chamar a função(a) até função(b);
+        x = x+h; //Andar com o intervalo em x, ou seja, 1º(a até x) 2º(x até b)
     } 
 
-     inte = h*soma;
+    inte = h*soma;
    
    
-   printf("O valor da integral é: %lf \n", inte);
+    printf("O valor da integral é: %lf \n", inte);
 
 }

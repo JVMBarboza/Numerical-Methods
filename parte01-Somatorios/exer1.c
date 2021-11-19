@@ -24,7 +24,7 @@ int main()
         {
                 printf("\nInsira o número:");
                 scanf("%i",&ch);
-		acres = ch*sum1
+				acres = ch*sum1;
                 sum2 = sum2 + acres;
         }
 

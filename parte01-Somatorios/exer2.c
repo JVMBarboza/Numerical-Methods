@@ -11,24 +11,25 @@ int main()
 	printf("Informe o tamanho do somatório que roda com j:");
 	scanf("%i", &n2);
 
-        for(i=0; i<n1 ;i++)
-	{
-		printf("Insira o valor do a:");
-                scanf("%i",&ch1);
+    for(i=0; i<n1 ;i++){
 
-		for(j=0; j<n2 ;j++)
-		{
-			if(i!=j)
-			{
-				printf("Insira o valor do b:");
-				scanf("%i", &ch2);
-		
-				ch = ch1*ch2;
-				sum2 = sum2 + ch;
-			}
+	printf("Insira o valor do a:");
+			scanf("%i",&ch1);
+
+	for(j=0; j<n2 ;j++){
+		if(i!=j){
+
+			printf("Insira o valor do b:");
+			scanf("%i", &ch2);
+	
+			ch = ch1*ch2;
+			sum2 = sum2 + ch;
 		}
-		sum1 = sum1 + sum2;
-		sum2 = 0;
+	}
+
+	sum1 = sum1 + sum2;
+	sum2 = 0;
+	
 	}
 
 	return 0;

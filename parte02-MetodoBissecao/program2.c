@@ -18,15 +18,15 @@ int main()
 {
 	int key=0;
 	double a,b,xn,i;
-
 	
 	do{
-	printf("Informe o valor do intervalo:\n");
-	scanf("%lf", &a);
-	scanf("%lf", &b);
+		printf("Informe o valor do intervalo:\n");
+		scanf("%lf", &a);
+		scanf("%lf", &b);
 	}while( a > b);//não permite o input de um a<b
 	
 	i=a+0.5; //0.5 -> deslocamento para não termos um produto entre f(a) e f(a) na primeira iteracao
+	
 	do{//checa se tem zero no intervalo e seta key = 1
 		if( function(a)*function(i) < 0)
 		{
@@ -35,7 +35,6 @@ int main()
 		i = i + 1;//esse incremento, quanto menor mais acurado será a verificação
 	}while(i < b); 
 	
-		
 	if(key == 1)//tem zero no intervalo
 	{
 		xn = (a+b)/2.0;

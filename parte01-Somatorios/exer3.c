@@ -7,8 +7,8 @@ int main()
 	printf("Insira o tamanho do produtório:");
 	scanf("%i",&N);
 
-	for(i=0;i<N;i++)
-	{
+	for(i=0;i<N;i++){
+		
 		printf("Insira o valor do termo [%i] do produtório:",i+1);
 		scanf("%i\n",&ch);
 

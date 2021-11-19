@@ -27,8 +27,8 @@ int main()
 	}while( deriv_function(x1) == 0 );
 
 	do{
-		x2 = x1-function(x1)/deriv_function(x1);
-		x1=x2;
+		x2 = x1 - function(x1)/deriv_function(x1);
+		x1 = x2;
 		p++;
 	}while( fabs(function(x2)) >= eps);
 
