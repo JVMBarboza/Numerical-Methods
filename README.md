@@ -103,8 +103,6 @@ Don't forget to give the project a star! Thanks again!
 
 João Victor Machado Barboza - victorbarboza7657@gmail.com - https://www.linkedin.com/in/joaovictor-barboza/
 
-Project Link: [https://github.com/JVMBarboza/Agent-Based-Model-Covid19](https://github.com/JVMBarboza/Agent-Based-Model-Covid19)
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
